@@ -1,0 +1,137 @@
+{
+  "rmse_ic50": 323.3829612948652,
+  "rmse_cc50": 438.57246439081933,
+  "rmse_si": 99.40349524229268,
+  "score": 287.11964030932575,
+  "ic50_meta": {
+    "params_normal": {
+      "objective": "reg:squarederror",
+      "eval_metric": "rmse",
+      "learning_rate": 0.2513480961828418,
+      "max_depth": 3,
+      "min_child_weight": 48,
+      "subsample": 0.7409888154997246,
+      "colsample_bytree": 0.7633592411132634,
+      "colsample_bylevel": 0.5568972116468437,
+      "reg_lambda": 0.6267208297322439,
+      "reg_alpha": 0.0004656174045905206,
+      "gamma": 2.096113574991036
+    },
+    "params_extreme": {
+      "objective": "reg:squarederror",
+      "eval_metric": "rmse",
+      "learning_rate": 0.2513480961828418,
+      "max_depth": 3,
+      "min_child_weight": 48,
+      "subsample": 0.7409888154997246,
+      "colsample_bytree": 0.7633592411132634,
+      "colsample_bylevel": 0.5568972116468437,
+      "reg_lambda": 0.6267208297322439,
+      "reg_alpha": 0.0004656174045905206,
+      "gamma": 2.096113574991036
+    },
+    "params_clf": {
+      "objective": "binary:logistic",
+      "eval_metric": "auc",
+      "learning_rate": 0.09295178415488575,
+      "max_depth": 4,
+      "min_child_weight": 19,
+      "subsample": 0.8059476959751948,
+      "colsample_bytree": 0.9378523921158216,
+      "reg_lambda": 0.011114150065362316,
+      "reg_alpha": 0.00041576385240900106,
+      "scale_pos_weight": 6.130654631007729
+    },
+    "threshold": 500,
+    "rmse_normal": 312.1523863434869,
+    "rmse_twostage": 323.3829612948652,
+    "clf_auc": 0.8011471895839949
+  },
+  "cc50_meta": {
+    "params_normal": {
+      "objective": "reg:squarederror",
+      "eval_metric": "rmse",
+      "learning_rate": 0.05043174515857297,
+      "max_depth": 9,
+      "min_child_weight": 18,
+      "subsample": 0.7705009525642036,
+      "colsample_bytree": 0.49894466429834194,
+      "colsample_bylevel": 0.5687115076445597,
+      "reg_lambda": 0.06313687854853091,
+      "reg_alpha": 0.0002784646930231987,
+      "gamma": 0.2699269985714206
+    },
+    "params_extreme": {
+      "objective": "reg:squarederror",
+      "eval_metric": "rmse",
+      "learning_rate": 0.05043174515857297,
+      "max_depth": 9,
+      "min_child_weight": 18,
+      "subsample": 0.7705009525642036,
+      "colsample_bytree": 0.49894466429834194,
+      "colsample_bylevel": 0.5687115076445597,
+      "reg_lambda": 0.06313687854853091,
+      "reg_alpha": 0.0002784646930231987,
+      "gamma": 0.2699269985714206
+    },
+    "params_clf": {
+      "objective": "binary:logistic",
+      "eval_metric": "auc",
+      "learning_rate": 0.18437193048958292,
+      "max_depth": 7,
+      "min_child_weight": 23,
+      "subsample": 0.582727173216766,
+      "colsample_bytree": 0.3544456369965436,
+      "reg_lambda": 0.06723089622142049,
+      "reg_alpha": 0.0006859734692432027,
+      "scale_pos_weight": 19.246440558753655
+    },
+    "threshold": 1500,
+    "rmse_normal": 444.6781768400392,
+    "rmse_twostage": 438.57246439081933,
+    "clf_auc": 0.9214281867628844
+  },
+  "si_meta": {
+    "params_normal": {
+      "objective": "regression",
+      "metric": "rmse",
+      "learning_rate": 0.19080692955407105,
+      "num_leaves": 100,
+      "min_data_in_leaf": 44,
+      "max_depth": 3,
+      "feature_fraction": 0.6812372115514344,
+      "bagging_fraction": 0.6797078830287397,
+      "bagging_freq": 9,
+      "lambda_l1": 0.3629278549910306,
+      "lambda_l2": 5.004391664064985
+    },
+    "params_extreme": {
+      "objective": "regression",
+      "metric": "rmse",
+      "learning_rate": 0.19080692955407105,
+      "num_leaves": 100,
+      "min_data_in_leaf": 44,
+      "max_depth": 3,
+      "feature_fraction": 0.6812372115514344,
+      "bagging_fraction": 0.6797078830287397,
+      "bagging_freq": 9,
+      "lambda_l1": 0.3629278549910306,
+      "lambda_l2": 5.004391664064985
+    },
+    "params_clf": {
+      "objective": "binary",
+      "metric": "binary_logloss",
+      "is_unbalance": true,
+      "learning_rate": 0.013528680497706875,
+      "num_leaves": 129,
+      "min_data_in_leaf": 35,
+      "feature_fraction": 0.7335348876780982,
+      "lambda_l1": 2.238420205980584,
+      "lambda_l2": 0.024946137204566374
+    },
+    "threshold": 200,
+    "rmse_normal": 102.55670908470063,
+    "rmse_twostage": 99.40349524229268,
+    "clf_auc": 0.7706645056726095
+  }
+}

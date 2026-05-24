@@ -1,0 +1,43 @@
+{
+  "params_normal": {
+    "objective": "regression",
+    "metric": "rmse",
+    "learning_rate": 0.19080692955407105,
+    "num_leaves": 100,
+    "min_data_in_leaf": 44,
+    "max_depth": 3,
+    "feature_fraction": 0.6812372115514344,
+    "bagging_fraction": 0.6797078830287397,
+    "bagging_freq": 9,
+    "lambda_l1": 0.3629278549910306,
+    "lambda_l2": 5.004391664064985
+  },
+  "params_extreme": {
+    "objective": "regression",
+    "metric": "rmse",
+    "learning_rate": 0.19080692955407105,
+    "num_leaves": 100,
+    "min_data_in_leaf": 44,
+    "max_depth": 3,
+    "feature_fraction": 0.6812372115514344,
+    "bagging_fraction": 0.6797078830287397,
+    "bagging_freq": 9,
+    "lambda_l1": 0.3629278549910306,
+    "lambda_l2": 5.004391664064985
+  },
+  "params_clf": {
+    "objective": "binary",
+    "metric": "binary_logloss",
+    "is_unbalance": true,
+    "learning_rate": 0.013528680497706875,
+    "num_leaves": 129,
+    "min_data_in_leaf": 35,
+    "feature_fraction": 0.7335348876780982,
+    "lambda_l1": 2.238420205980584,
+    "lambda_l2": 0.024946137204566374
+  },
+  "threshold": 200,
+  "rmse_normal": 102.55670908470063,
+  "rmse_twostage": 99.40349524229268,
+  "clf_auc": 0.7706645056726095
+}
