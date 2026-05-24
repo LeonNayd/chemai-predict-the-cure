@@ -13,7 +13,7 @@
 ```
 .
 ├── README.md                       |
-├── artifacts                       | Артифакты обучения моделей
+├── artifacts                       | Артефакты обучения моделей
 │   ├── final_cc50_params.json      
 │   ├── final_ic50_params.json
 │   ├── final_scores.json
