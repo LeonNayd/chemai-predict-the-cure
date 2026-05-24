@@ -50,3 +50,6 @@ jupyter lab notebooks/final_pipeline.ipynb
 - [UV](https://docs.astral.sh/uv/#installation):
 - Python 3.12+
 - зависимости в `pyproject.toml`: `numpy, pandas, scikit-learn, lightgbm, xgboost, optuna`
+
+## Результаты Kaggle:
+![Результаты Kaggle](docs/kaggle_screenshot.png)
