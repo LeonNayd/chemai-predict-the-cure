@@ -47,4 +47,6 @@ jupyter lab notebooks/final_pipeline.ipynb
 - FORCE_RETUNE = True — перезапускает тюнинг (`~0.5 - 1` часа)
 
 Требования:
-Python 3.12+, зависимости в `pyproject.toml`: `numpy, pandas, scikit-learn, lightgbm, xgboost, optuna`
+- [UV](https://docs.astral.sh/uv/#installation):
+- Python 3.12+
+- зависимости в `pyproject.toml`: `numpy, pandas, scikit-learn, lightgbm, xgboost, optuna`
