@@ -1,6 +1,6 @@
 # ChemAI: Predict the Cure
 
-## Команда Data Seven
+## Команда Data Seven (Команда 7)
 
 | Роль | Участник |
 |------|----------|
