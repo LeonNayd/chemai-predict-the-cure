@@ -1,56 +1,119 @@
-# ChemAI Predict the Cure
-## Команда 7
+# ChemAI: Predict the Cure
 
-Решение соревнования по предсказанию биологических показателей химических соединений:
-**IC50** (подавление вируса), **CC50** (токсичность для клеток), **SI** (индекс селективности).
+## Команда Data Seven
 
-Метрика: `score = (RMSE_IC50 + RMSE_CC50 + RMSE_SI) / 3` → итог **286** (Kaggle).
+| Роль | Участник |
+|------|----------|
+| Team Lead, Data Analyst | Леонид Найданов |
+| Data Engineer | Роман Гусарь |
+| Machine Learning Engineer | Сергей Соловьев |
 
 ---
-[О том, как решали](./docs/SUBMISSION_LOGIC.md)
+
+## О проекте
+
+Решение соревнования по предсказанию биологических показателей химических соединений:
+
+| Показатель | Описание |
+|------------|----------|
+| **IC50** | Концентрация, при которой вещество подавляет 50% активности вируса |
+| **CC50** | Концентрация, при которой вещество токсично для 50% клеток |
+| **SI** | Индекс селективности (отношение CC50 к IC50) |
+
+### Метрика оценки
+
+Финальный скор вычисляется как среднее арифметическое RMSE по трём показателям:
+
+```
+score = (RMSE_IC50 + RMSE_CC50 + RMSE_SI) / 3
+```
+
+**Результат на Kaggle: 286**
+
+---
+
+## Логика решения
+
+Подробное описание подхода, feature engineering и выбора порогов:
+
+- [Основная логика решения](./docs/SUBMISSION_LOGIC.md)
+- [Логика подбора порогов для классификации](./docs/THR_LOGIC.md)
+
 ---
 
 ## Структура репозитория
+
 ```
 .
-├── README.md                       |
-├── artifacts                       | Артефакты обучения моделей
-│   ├── final_cc50_params.json      
-│   ├── final_ic50_params.json
-│   ├── final_scores.json
-│   └── final_si_params.json
-├── data                            | Данные
-│   ├── processed                   | Предобработка
-│   └── raw                         | Исходные данные
-│       ├── sample_submission.csv
-│       ├── test.csv
-│       └── train.csv
-├── docs                            | Документация по решению
-│   ├── SUBMISSION_LOGIC.md         | Основная логика решения
-│   └── THR_LOGIC.md                | Логика подбора порогов
-├── notebooks                       | .ipynb файлы
-│   └── final_pipeline.ipynb
-├── pyproject.toml            
-├── submissions                     | Решения
-│   └── final_submission.csv
-└── uv.lock
+├── README.md                           # Описание проекта (вы здесь)
+├── pyproject.toml                      # Зависимости проекта
+├── uv.lock                             # Lock-файл для uv
+│
+├── artifacts/                          # Артефакты обученных моделей
+│   ├── final_ic50_params.json          # Гиперпараметры для IC50
+│   ├── final_cc50_params.json          # Гиперпараметры для CC50
+│   ├── final_si_params.json            # Гиперпараметры для SI
+│   └── final_scores.json               # Сохранённые скоры
+│
+├── data/
+│   ├── raw/                            # Исходные данные
+│   │   ├── train.csv                   # Обучающая выборка
+│   │   ├── test.csv                    # Тестовая выборка
+│   │   └── sample_submission.csv       # Пример сабмита
+│   └── processed/                      # Данные после предобработки
+│
+├── docs/                               # Документация
+│   ├── SUBMISSION_LOGIC.md             # Основная логика решения
+│   ├── THR_LOGIC.md                    # Логика подбора порогов
+│   └── kaggle_screenshot.png           # Скриншот результата на Kaggle
+│
+├── notebooks/
+│   └── final_pipeline.ipynb            # Основной пайплайн обучения
+│
+└── submissions/
+    └── final_submission.csv            # Финальный файл для сабмита
 ```
 
-## Как запустить
+---
 
-```sh
+## Быстрый запуск
+
+### Требования
+
+- [UV](https://docs.astral.sh/uv/#installation) — быстрый менеджер пакетов
+- Python 3.12+
+- Зависимости указаны в `pyproject.toml`:
+  - `numpy`, `pandas`
+  - `scikit-learn`, `lightgbm`, `xgboost`
+  - `optuna`
+
+### Установка и запуск
+
+```bash
+# 1. Установка зависимостей через uv
 uv sync
+
+# 2. Запуск Jupyter Lab
 jupyter lab notebooks/final_pipeline.ipynb
 ```
 
-Параметры в первой ячейке:
-- FORCE_RETUNE = False — использует кэшированные параметры Optuna
-- FORCE_RETUNE = True — перезапускает тюнинг (`~0.5 - 1` часа)
+### Настройка параметров
 
-Требования:
-- [UV](https://docs.astral.sh/uv/#installation):
-- Python 3.12+
-- зависимости в `pyproject.toml`: `numpy, pandas, scikit-learn, lightgbm, xgboost, optuna`
+В первой ячейке ноутбука `final_pipeline.ipynb`:
 
-## Результаты Kaggle:
-![Результаты Kaggle](docs/kaggle_screenshot.png)
+| Параметр | Значение | Описание |
+|----------|----------|----------|
+| `FORCE_RETUNE = False` | (по умолчанию) | Использует кэшированные параметры Optuna |
+| `FORCE_RETUNE = True` | (если нужно) | Перезапускает поиск гиперпараметров (~0.5–1 час) |
+
+---
+
+## Результаты на Kaggle
+
+![Результаты Kaggle](./docs/kaggle_screenshot.png)
+
+---
+
+## Лицензия
+
+Проект выполнен в рамках хакатона. Все права принадлежат команде Data Seven.
