@@ -60,18 +60,17 @@ score = (RMSE_IC50 + RMSE_CC50 + RMSE_SI) / 3
 │   │   ├── train.csv                   # Обучающая выборка
 │   │   ├── test.csv                    # Тестовая выборка
 │   │   └── sample_submission.csv       # Пример сабмита
-│   └── processed/                      # Данные после предобработки
-│
+│   ├── processed/                      # Данные после предобработки
+│   └── submissions/
+│       └── final_submission.csv        # Финальный файл для сабмита
 ├── docs/                               # Документация
 │   ├── SUBMISSION_LOGIC.md             # Основная логика решения
 │   ├── THR_LOGIC.md                    # Логика подбора порогов
 │   └── kaggle_screenshot.png           # Скриншот результата на Kaggle
 │
-├── notebooks/
-│   └── final_pipeline.ipynb            # Основной пайплайн обучения
-│
-└── submissions/
-    └── final_submission.csv            # Финальный файл для сабмита
+└── notebooks/
+    └── final_pipeline.ipynb            # Основной пайплайн обучения
+
 ```
 
 ---
