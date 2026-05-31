@@ -38,6 +38,7 @@ score = (RMSE_IC50 + RMSE_CC50 + RMSE_SI) / 3
 
 - [Основная логика решения](./docs/SUBMISSION_LOGIC.md)
 - [Логика подбора порогов для классификации](./docs/THR_LOGIC.md)
+- [Видео презентация](./docs/presa.mp4)
 
 ---
 
@@ -110,11 +111,6 @@ jupyter lab notebooks/final_pipeline.ipynb
 ## Результаты на Kaggle
 
 ![Результаты Kaggle](./docs/kaggle_screenshot.png)
-
----
-
-## Видео презентация
-<video src="https://raw.githubusercontent.com/LeonNayd/chemai-predict-the-cure/main/docs/presa.mp4" controls width="700"></video>
 
 ---
 
