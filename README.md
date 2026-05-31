@@ -113,6 +113,11 @@ jupyter lab notebooks/final_pipeline.ipynb
 
 ---
 
+## Видео презентация
+<video src="https://raw.githubusercontent.com/LeonNayd/chemai-predict-the-cure/main/docs/presa.mp4" controls width="700"></video>
+
+---
+
 ## Лицензия
 
 Проект выполнен в рамках хакатона. Все права принадлежат команде Data Seven.
